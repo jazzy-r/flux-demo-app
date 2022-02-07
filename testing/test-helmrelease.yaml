@@ -11,7 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: dagster
-      version: 0.13.13
+      version: 0.13.14
   install:
     createNamespace: true
   interval: 1m0s
@@ -22,7 +22,7 @@ spec:
         - name: "k8s-example-user-code-1"
           image:
             repository: "docker.io/dagster/user-code-example"
-            tag: 0.13.13
+            tag: 0.13.14
             pullPolicy: Always
           dagsterApiGrpcArgs:
             - "--python-file"
