@@ -10,7 +10,7 @@ spec:
       chart: dagster
       sourceRef:
         kind: HelmRepository
-        name: dagster
+        name: dagster-1
       version: 0.13.14
   install:
     createNamespace: true
