@@ -1,0 +1,21 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: dagster-v2
+  namespace: dagster
+spec:
+  chart:
+    spec:
+      chart: dagster
+      sourceRef:
+        kind: HelmRepository
+        name: dagster
+      version: 0.13.15
+  install:
+    createNamespace: true
+  interval: 1m0s
+  targetNamespace: dagster
+  valuesFrom:
+    - kind: ConfigMap
+      name: podinfo-values
