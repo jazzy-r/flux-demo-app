@@ -3,7 +3,7 @@ dagster-user-deployments:
     - name: "k8s-example-user-code-1"
       image:
         repository: "docker.io/dagster/user-code-example"
-        tag: 0.13.15
+        tag: 0.13.16
         pullPolicy: Always
       dagsterApiGrpcArgs:
         - "--python-file"
